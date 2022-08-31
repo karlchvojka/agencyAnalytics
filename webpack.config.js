@@ -69,6 +69,14 @@ module.exports = {
         use: 'babel-loader',
       },
       {
+        test: /\.less$/i,
+        use: [
+          "style-loader",
+          "css-loader",
+          "less-loader",
+        ],
+      },
+      {
         test: /\.(png|jpe?g|gif)$/i,
         type: 'asset/resource',
       },
