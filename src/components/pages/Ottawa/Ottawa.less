@@ -1,0 +1,98 @@
+// Variable Declarations
+@import 'globalConfig/css_vars.less';
+
+.ottawaWrap {
+  border: solid 8px #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 0px 15px 5px #D6D6D6;
+  -webkit-box-shadow: 0px 0px 15px 5px #D6D6D6; 
+  width: 100%;
+
+  .todayWrap {
+    padding: 50px 0px 60px 0px;
+
+    h1 {
+      text-align: center;
+    }
+    .todayInner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin: 40px auto 0px auto;
+      width: 300px;
+
+      .todayInnerLeft {
+        display: grid;
+        margin: 10px;
+        position: relative;
+
+        svg {
+          justify-self: end;
+          display: block;
+          height: 145px;
+          width: auto;
+          position: absolute;
+          top: -20px;
+          right: -20px;
+          color: @darkGrey;
+        }
+      }
+      .todayInnerRight {
+        margin: 10px;
+
+        p {
+          font-family: 'Teko-Light';
+          font-size: 95px;
+          line-height: 75px;
+        }
+      }
+    }
+  }
+
+  .forecastWrap {
+    background-color: #ffffff;
+    column-gap: 8px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    section {
+      background-color: @lightBlue;
+      border-top: 8px solid #ffffff;
+      border-bottom: 0px;
+      
+      h3 {
+        margin: 20px 0px;
+        font-size: 24px;
+        text-align: center;
+      }
+
+      .imgPlaceholder {
+        display:grid;
+        border: 0px;
+        height: 80px;
+        position: relative;
+
+        svg {
+          display: block;
+          justify-self: center;
+          height: 100px;
+          width: auto;
+          margin: 0 auto;
+          color: @darkGrey;
+          text-align: center;
+          position: absolute;
+          top: -9px;
+        }
+      }
+
+      p {
+        font-family: 'Teko-Light';
+        font-size: 40px;
+        line-height: 28px;
+        margin: 20px 0px;
+        text-align: center;
+      }
+    }
+
+   
+  }
+}
