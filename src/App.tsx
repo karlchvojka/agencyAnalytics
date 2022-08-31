@@ -6,20 +6,20 @@ import { Routes, Route, Link } from 'react-router-dom'
 
 // Component Imports
 import Header from 'modules/Header/Header'
+import Ottawa from 'pages/Ottawa/Ottawa'
 
 // CSS Imports
 import './globalConfig/GlobalStyles.less'
+import './App.less'
 
 const App: FC = () => {
   return (
-    <Routes>
-      <Route path='/' element={
-        <section>
-          <Header />
-          <h1>Welcome to React App thats build using Webpack and Babel separately</h1>
-        </section>
-      } />
-    </Routes>
+    <section className='appWrap'>
+      <Header />
+      <Routes>
+        <Route path='/' element={<Ottawa />} />
+      </Routes>
+    </section>
   )
 }
 
