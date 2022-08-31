@@ -2,16 +2,16 @@
 import React, { FC } from 'react'
 
 // CSS Imports
-import StyledHeader from './StyledHeader'
+import './Header.less'
 
 /**
  * This the Header component.
  */
 const Header: FC = () => {
   return (
-    <StyledHeader>
+    <section className="header">
       <h1>The Template 2022</h1>
-    </StyledHeader>
+    </section>
   )
 }
 
