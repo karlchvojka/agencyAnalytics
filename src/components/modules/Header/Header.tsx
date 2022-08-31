@@ -1,6 +1,9 @@
 // Framework Imports
 import React, { FC } from 'react'
 
+// Library Imports
+import { NavLink } from 'react-router-dom'
+
 // CSS Imports
 import './Header.less'
 
@@ -10,7 +13,11 @@ import './Header.less'
 const Header: FC = () => {
   return (
     <section className="header">
-      <h1>The Template 2022</h1>
+      <nav>
+        <NavLink to='/'>Ottawa</NavLink>
+        <NavLink to='/moscow'>Moscow</NavLink>
+        <NavLink to='/tokyo'>Tokyo</NavLink>
+      </nav>
     </section>
   )
 }

@@ -17,7 +17,8 @@
       "globalAssets/*": ["src/globalAssets/*"],
       "globalConfig/*": ["src/globalConfig/*"],
       "modules/*": ["src/components/modules/*"],
-      "layouts/*": ["layouts", "src/components/layouts/*"]
+      "layouts/*": ["src/components/layouts/*"],
+      "pages/*": ["src/components/pages/*"]
     }
   },
   "include": ["src/**/*", "./index.tsx"],

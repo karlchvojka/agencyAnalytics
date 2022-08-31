@@ -1,3 +1,6 @@
+// Variable Imports
+@import 'globalConfig/css_vars.less';
+
 /*
   START OF RESET
   http://meyerweb.com/eric/tools/css/reset/
@@ -35,6 +38,7 @@ footer, header, hgroup, main, menu, nav, section {
     display: none;
 }
 body {
+  background-color: @lightBlue;
   line-height: 1;
 }
 menu, ol, ul {
@@ -51,6 +55,10 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+a:link, a:visited {
+  text-decoration: none;
 }
 
 /* END OF RESET */

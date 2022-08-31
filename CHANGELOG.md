@@ -11,6 +11,9 @@ Initial building of the Template.
 
 #### Added
 - Installed LESS support
+- Header font files
+- Header component and styles
+- Ottawa component and styles
 
 #### Removed
 - Uninstalled Styled-Component librarys
