@@ -5,16 +5,13 @@ import React, { FC } from 'react'
 import Header from 'modules/Header/Header'
 
 // CSS Imports
-import GlobalStyle from 'globalConfig/GlobalStyles'
-import StyledApp from './StyledApp'
-
+import './globalConfig/GlobalStyles.less'
 const App: FC = () => {
   return (
-    <StyledApp>
-      <GlobalStyle />
+    <section>
       <Header />
       <h1>Welcome to React App thats build using Webpack and Babel separately</h1>
-    </StyledApp>
+    </section>
   )
 }
 
