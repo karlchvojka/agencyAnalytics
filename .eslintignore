@@ -1,0 +1,5 @@
+# - node_modules excluded by default
+
+**/public
+node_modules
+dist

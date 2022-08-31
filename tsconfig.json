@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "noImplicitAny": true,
+    "lib": ["es6", "dom"],
+    "target": "es6",
+    "module": "es6",
+    "jsx": "react",
+    "allowJs": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "baseUrl": ".",
+    "paths": {
+      "public/*": ["public/*"],
+      "elements/*": ["src/components/elements/*"],
+      "globalAssets/*": ["src/globalAssets/*"],
+      "globalConfig/*": ["src/globalConfig/*"],
+      "modules/*": ["src/components/modules/*"],
+      "layouts/*": ["layouts", "src/components/layouts/*"]
+    }
+  },
+  "include": ["src/**/*", "./index.tsx"],
+  "exclude": ["node_modules", "dist"]
+}
