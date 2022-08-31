@@ -57,7 +57,8 @@
           ["globalAssets", "./src/globalAssets"],
           ["globalConfig", "./src/globalConfig"],
           ["modules", "./src/components/modules"],
-          ["layouts", "./src/components/layouts"]
+          ["layouts", "./src/components/layouts"],
+          ["pages", "./src/components/pages"]
         ],
         "extensions": [".js", ".jsx", ".ts", ".tsx"]
       }
