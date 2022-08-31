@@ -12,15 +12,16 @@ import Ottawa from 'pages/Ottawa/Ottawa'
 import './globalConfig/GlobalStyles.less'
 import './App.less'
 
-const App: FC = () => {
-  return (
-    <section className='appWrap'>
-      <Header />
-      <Routes>
-        <Route path='/' element={<Ottawa />} />
-      </Routes>
-    </section>
-  )
+class App extends React.Component {
+  render() {
+    return (
+      <section className='appWrap'>
+        <Header />
+        <Routes>
+          <Route path='/' element={<Ottawa />} />
+        </Routes>
+      </section>
+    );
+  }
 }
-
 export default App
