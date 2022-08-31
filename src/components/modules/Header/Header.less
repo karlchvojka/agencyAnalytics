@@ -1,5 +1,31 @@
 // Asset Imports
 @import 'globalAssets/fonts/fonts';
-    color: blue;
+
+// Variable Declarations
+@import 'globalConfig/css_vars.less';
+
+.header {
+  display: grid;
+  padding: 80px 0 80px 0;
+  justify-content: center;
+
+  nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 925px;
+
+
+    a:link, a:visited {
+      color: @darkGrey;
+      font-family: 'Montserrat-Light';
+      font-size: 40px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    a:hover, a.active {
+      color: @midBlue;
+      font-family: 'Montserrat-Bold';
+    }
   }
 }
