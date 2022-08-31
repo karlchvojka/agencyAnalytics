@@ -4,6 +4,7 @@ import React, { FC } from 'react'
 // Component Imports
 import { IconContext } from "react-icons";
 import { WiDaySunny } from "react-icons/wi";
+import Day from 'elements/Day/Day'
 
 // CSS Imports
 import './Ottawa.less'
@@ -33,34 +34,26 @@ class Ottawa extends React.Component {
           </section>
         </section>
         <section className="forecastWrap">
-          <section className="dayWrap">
-            <h3>Wed</h3>
-            <section className="imgPlaceholder">
-              <WiDaySunny />
-            </section>
-            <p>19<span>&#176;</span></p>
-          </section>
-          <section className="dayWrap">
-            <h3>Thu</h3>
-            <section className="imgPlaceholder">
-              <WiDaySunny />
-            </section>
-            <p>19<span>&#176;</span></p>
-          </section>
-          <section className="dayWrap">
-            <h3>Fri</h3>
-            <section className="imgPlaceholder">
-              <WiDaySunny />
-            </section>
-            <p>19<span>&#176;</span></p>
-          </section>
-          <section className="dayWrap">
-            <h3>Sat</h3>
-            <section className="imgPlaceholder">
-              <WiDaySunny />
-            </section>
-            <p>19<span>&#176;</span></p>
-          </section>
+          <Day
+            day='Wed'
+            temp={19}
+            forecast='cloudy'
+          />
+          <Day
+            day='Thu'
+            temp={22}
+            forecast='cloudy'
+          />
+          <Day
+            day='Fri'
+            temp={24}
+            forecast='cloudy'
+          />
+          <Day
+            day='Sat'
+            temp={26}
+            forecast='cloudy'
+          />
         </section>
       </section>
     );
