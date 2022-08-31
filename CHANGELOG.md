@@ -18,3 +18,15 @@ Initial building of the Template.
 #### Removed
 - Uninstalled Styled-Component librarys
 - Deleted all current un-needed style files.
+
+## [1.0.0] Continued - 2022-08-31
+Continuation of dev from yesteday
+
+#### Added
+- Install React Icons
+- Install Teko Font
+- Implement Ottawa Component
+
+#### Changed
+- Sizing changes to App.js
+- Sizing changes to Ottawa.js
