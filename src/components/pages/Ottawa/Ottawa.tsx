@@ -1,32 +1,79 @@
 // Framework Imports
-import React, { FC } from 'react'
+import React from 'react'
 
 // Component Imports
-import { IconContext } from "react-icons";
-import { WiDaySunny } from "react-icons/wi";
 import Day from 'elements/Day/Day'
+import WeatherIco from 'elements/WeatherIcon/WeatherIcon';
+
+// Helper Imports
+import { FetchWeather } from 'src/helpers/FetchWeather.js'
 
 // CSS Imports
 import './Ottawa.less'
 
+// Type Declarations
+interface DayItem {
+  dt?: string;
+  temp?: {
+    day?: number
+  };
+  weather?: Array<WeatherItem>;
+}
+
+interface WeatherItem {
+  description?: string;
+}
+
+interface CityState {
+  current: {
+    dt?: number;
+    temp?: number;
+    weather?: Array<WeatherItem>;
+  }; 
+  daily: DayItem[];
+}
+
+interface Props {}
+
 /**
  * This the Ottawa component.
  */
-class Ottawa extends React.Component {
+class Ottawa extends React.Component<Props, CityState> {
+  // State Declarations
+  constructor(props: Props) {
+    super(props);
+    this.state = {
+      current: {},
+      daily: []
+    }
+  }
+  
+  // Component process
+  componentDidMount() {
+    FetchWeather('45.4215', '-75.6972').then(response => {
+      this.setState({
+        current: response.data.current,
+        daily: response.data.daily
+      });
+    });
+  }
+  
   render() {
     return (
+      Object.keys(this.state.current).length > 0 ?
       <section className="ottawaWrap">
         <section className="todayWrap">
           <h1>Today</h1>
           <section className="todayInner">
             <section className="todayInnerLeft">
-            <IconContext.Provider value={{ className: "shared-class", size: '20' }}>
-              <WiDaySunny className="wi-fw" />
-            </IconContext.Provider>
+            <WeatherIco
+              current={this.state.current.weather[0].description}
+              place={'current'}
+              />
             </section>
             <section className="todayInnerRight">
               <section className="innerRightTop">
-                <p>19<span>&#176;</span></p>
+                <p>{Math.round(this.state.current.temp)}<span>&#176;</span></p>
               </section>
               <section className="innerRightBottom"></section>
                 <h2>Clouds</h2>
@@ -34,28 +81,20 @@ class Ottawa extends React.Component {
           </section>
         </section>
         <section className="forecastWrap">
-          <Day
-            day='Wed'
-            temp={19}
-            forecast='cloudy'
-          />
-          <Day
-            day='Thu'
-            temp={22}
-            forecast='cloudy'
-          />
-          <Day
-            day='Fri'
-            temp={24}
-            forecast='cloudy'
-          />
-          <Day
-            day='Sat'
-            temp={26}
-            forecast='cloudy'
-          />
+          {
+            this.state.daily.slice(1, 5).map((day: DayItem, index) => {
+              return <Day
+                day={day.dt}
+                key={day.dt}
+                temp={day.temp.day}
+                forecast={day.weather[0].description}
+              />
+            })
+          }
         </section>
       </section>
+      :
+      <h2>Loading...</h2>
     );
   }
 }
