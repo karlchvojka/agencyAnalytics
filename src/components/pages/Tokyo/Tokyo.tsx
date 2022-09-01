@@ -9,7 +9,7 @@ import WeatherIco from 'elements/WeatherIcon/WeatherIcon';
 import { FetchWeather } from 'src/helpers/FetchWeather.js'
 
 // CSS Imports
-import './Ottawa.less'
+import './Tokyo.less'
 
 // Type Declarations
 interface DayItem {
@@ -36,9 +36,9 @@ interface CityState {
 interface Props {}
 
 /**
- * This the Ottawa component.
+ * This the Tokyo component.
  */
-class Ottawa extends React.Component<Props, CityState> {
+class Tokyo extends React.Component<Props, CityState> {
   // State Declarations
   constructor(props: Props) {
     super(props);
@@ -50,18 +50,18 @@ class Ottawa extends React.Component<Props, CityState> {
   
   // Component process
   componentDidMount() {
-    FetchWeather('45.4215', '-75.6972').then(response => {
+    FetchWeather('35.6762', '139.6503').then(response => {
       this.setState({
         current: response.data.current,
         daily: response.data.daily
       });
     });
   }
-  
+
   render() {
     return (
       Object.keys(this.state.current).length > 0 ?
-      <section className="ottawaWrap">
+      <section className="tokyoWrap">
         <section className="todayWrap">
           <h1>Today</h1>
           <section className="todayInner">
@@ -99,4 +99,4 @@ class Ottawa extends React.Component<Props, CityState> {
   }
 }
 
-export default Ottawa
+export default Tokyo

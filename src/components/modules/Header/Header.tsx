@@ -10,16 +10,18 @@ import './Header.less'
 /**
  * This the Header component.
  */
-const Header: FC = () => {
-  return (
-    <section className="header">
-      <nav>
-        <NavLink to='/'>Ottawa</NavLink>
-        <NavLink to='/moscow'>Moscow</NavLink>
-        <NavLink to='/tokyo'>Tokyo</NavLink>
-      </nav>
-    </section>
-  )
+class Header extends React.Component {
+  render() {
+    return (
+      <section className="header">
+        <nav>
+          <NavLink to='/'>Ottawa</NavLink>
+          <NavLink to='moscow'>Moscow</NavLink>
+          <NavLink to='tokyo'>Tokyo</NavLink>
+        </nav>
+      </section>
+    );
+  }
 }
 
 export default Header
