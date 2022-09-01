@@ -2,7 +2,11 @@
   "name": "take_home_test_karl_chvojka",
   "version": "1.0.0",
   "description": "Takehome Test - Karl Chvojka",
-  "main": "index.js",
+  "main": "index.tsx",
+  "engines": {
+    "node": "18.x",
+    "npm": "8.x"
+  },
   "scripts": {
     "start": "webpack-dev-server --mode development",
     "dev": "webpack-dev-server",
