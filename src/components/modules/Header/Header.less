@@ -6,13 +6,13 @@
 
 .header {
   display: grid;
-  padding: 40px 0 40px;
+  padding: 20px 0 20px;
   justify-content: center;
 
   nav {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    width: 630px;
+    grid-template-columns: 1fr;
+    width: 95%;
 
     a:link, a:visited {
       color: @darkGrey;
@@ -20,11 +20,37 @@
       font-size: 30px;
       text-align: center;
       text-transform: uppercase;
+      margin-bottom: 10px;
     }
 
     a:hover, a.active {
       color: @midBlue;
       font-family: 'Montserrat-Bold';
+    }
+  }
+}
+
+/* MOBILE FIRST DEFAULT STYLES */
+
+/* Min width of 414 */
+@media (min-width: 414px) {
+  .header {  
+    nav {
+      width: 95%;
+  
+    }
+  }
+}
+
+/* Min width of 768 */
+@media (min-width: 768px) {
+  .header {
+    padding: 40px 0 40px;
+  
+    nav {
+      grid-template-columns: repeat(3, 1fr);
+      width: 630px;
+  
     }
   }
 }

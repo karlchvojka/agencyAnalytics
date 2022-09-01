@@ -6,7 +6,7 @@
   border-radius: 8px;
   box-shadow: 0px 0px 15px 5px #D6D6D6;
   -webkit-box-shadow: 0px 0px 15px 5px #D6D6D6; 
-  width: 100%;
+  width: auto;
 
   .todayWrap {
     padding: 50px 0px 60px 0px;
@@ -18,7 +18,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       margin: 40px auto 0px auto;
-      width: 300px;
+      width: 100%;
 
       .todayInnerLeft {
         display: grid;
@@ -52,6 +52,23 @@
     background-color: #ffffff;
     column-gap: 8px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* MOBILE FIRST DEFAULT STYLES */
+
+/* Min width of 768 */
+@media (min-width: 768px) {
+  .ottawaWrap {
+    .todayWrap {
+      .todayInner {
+        width: 300px;
+      }
+    }
+
+    .forecastWrap {
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
 }
