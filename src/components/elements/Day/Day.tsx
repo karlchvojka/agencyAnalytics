@@ -1,8 +1,12 @@
 // Framework Imports
 import React from 'react'
 
+// Library Imports
+import Moment from 'react-moment'
+
 // Component Imports
 import { WiDaySunny } from "react-icons/wi";
+import WeatherIco from 'elements/WeatherIcon/WeatherIcon';
 
 // CSS Imports
 import './Day.less'
@@ -17,15 +21,18 @@ type DayProps = {
 /**
  * This the Day component.
  */
-class Day extends React.Component<DayProps> {
+class Day extends React.Component<DayProps, {}> {
   render() {
     return (
       <section className="dayWrap">
-        <h3>{this.props.day}</h3>
+        <h3><Moment format="ddd" unix>{this.props.day}</Moment></h3>
         <section className="imgPlaceholder">
-          <WiDaySunny />
+          <WeatherIco
+            current={this.props.forecast}
+            place={'current'}
+            />
         </section>
-        <p>{this.props.temp}<span>&#176;</span></p>
+        <p>{Math.round(this.props.temp)}<span>&#176;</span></p>
       </section>
     );
   }
