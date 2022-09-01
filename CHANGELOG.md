@@ -26,7 +26,12 @@ Continuation of dev from yesteday
 - Install React Icons
 - Install Teko Font
 - Implement Ottawa Component
+- Added Day Component
+- Added WeatherIcon Component
+- Added all the city components
 
 #### Changed
 - Sizing changes to App.js
 - Sizing changes to Ottawa.js
+- Implemented the API
+- heroku edits.

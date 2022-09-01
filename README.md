@@ -1,5 +1,5 @@
-# Typescript ReactJS Template 2022
-This is a CRA Alternative to be used to bootstrap new projects.  
+# AgencyAnalytics Test
+Simple weather app as a test from AgencyAnalytics.
 
 ## Requirements
 Make sure you are running the following:  
@@ -22,7 +22,7 @@ Run `npm install`
 ### Starting the app
 Run `npm start`
 
-This will start the app, via webpack, open your default browser, and serve it to [http://localhost:9500](http://localhost:9500)
+This will start the app, via webpack, open your default browser, and serve it to [http://localhost:3000](http://localhost:3000)
 
 ### Building the app
 Run `npm run build`
