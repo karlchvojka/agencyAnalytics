@@ -2,13 +2,18 @@
   "name": "take_home_test_karl_chvojka",
   "version": "1.0.0",
   "description": "Takehome Test - Karl Chvojka",
-  "main": "index.js",
+  "main": "index.tsx",
+  "engines": {
+    "node": "18.x",
+    "npm": "8.x"
+  },
   "scripts": {
     "start": "webpack-dev-server --mode development",
     "dev": "webpack-dev-server",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode production",
-    "lint": "eslint . --ext .tsx"
+    "lint": "eslint . --ext .tsx",
+    "heroku-prebuild": "npm install --dev"
   },
   "author": "Karl Chvojka",
   "license": "ISC",
